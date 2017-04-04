@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>e宠商城首页</title>
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/commen.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/swiper-3.4.1.min.css" />
+		<script src="js/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper-3.4.1.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			window.onload = function() {
+				var mySwiper = new Swiper('.swiper-container', {
+					loop: true,
+					autoplay: 2000,
+
+					// 如果需要分页器 
+					pagination: '.swiper-pagination',
+					paginationClickable: true,
+
+					// 如果需要导航按钮 
+					prevButton: '.swiper-button-next',
+					nextButton: '.swiper-button-prev',
+
+				});
+			}
+		</script>
+		<script type="text/javascript">
+			$(function() {
+				$(".top .left a").hover(function() {
+						$(".top .left a i").prop("class", "fa fa-angle-up")
+
+					}, function() {
+						$(".top .left a i").prop("class", "fa fa-angle-down")
+					})
+					/*var n = 0;
+					$(".nav li .left").hover(function(){
+						
+					})*/
+
+				$(".nav li .left").hover(function() {
+					$(this).addClass("active2")
+					$(".banner .banner_left .change").show();
+					$(".nav li .active2").removeClass("active2");
+					$(".banner .banner_left .nav").hide();
+				}, function() {
+					$(this).removeClass("active2")
+					$(".nav li .active2").addClass("active2");
+				})
+
+				$(".nav li .active2").hover(function() {
+					$(this).addClass("active2")
+					$(".banner .banner_left .change").hide();
+					$(".nav li .left").removeClass("active2");
+					$(".banner .banner_left .nav").show();
+				}, function() {
+					$(this).removeClass("active2")
+					$(".nav li .active2").addClass("active2");
+				})
+
+				$(".subside").hover(function() {
+					$(".nav-container").stop().slideDown()
+				}, function() {
+					$(".nav-container").stop().slideUp();
+				})
+
+				$(".navbar li").each(function(i) {
+					$(this).hover(function() {
+						$(this).addClass("red").siblings().removeClass("red");
+						$(".navbox").eq(i).show().siblings().hide();
+					}, function() {
+						$(this).removeClass("red");
+					});
+
+				});
+
+				$(".nav-container").hover(function() {
+					$(".nav-container").stop().show();
+				}, function() {
+					$(".nav-container").stop().slideUp();
+				})
+
+				var n = true;
+				$(".footer .footer_bottom li i").click(function() {
+					if(n) {
+						$(this).prop("class", "fa fa-angle-down");
+						$(".footer .footer_bottom .none").show();
+						n = false;
+					} else {
+						$(this).prop("class", "fa fa-angle-up");
+						$(".footer .footer_bottom .none").hide();
+						n = true;
+					}
+
+				})
+
+				$(".crazy .productlist .time_list li").hover(function() {
+					$(this).addClass("pink").siblings().removeClass("pink")
+
+					var iNew = $(this).find("time").html();
+
+					var newTime = /*iNow.setTime(*/ parseInt(iNew) /*)*/ ;
+					var myDate = new Date().setTime(newTime)
+
+					var iNow = new Date().getTime();
+					console.log(iNow)
+					console.log(myDate)
+						//console.log(iNow-myDate)
+				})
+
+				$(".floor .floor-right li a").hover(function(){
+					$(this).addClass("re").siblings().removeClass("re")
+				},function(){
+					$(this).removeClass("re")
+				})
+			})
+		</script>
+
+	</head>
+
+	<body style="position: relative;height:100%">
+		<!--top-->
+		<div class="top">
+			<div class="inner">
+				<p class="left">送至：
+					<a href="#">重庆 <i class="fa fa-angle-down"></i></a>
+				</p>
+				<p class="zheng"><span></span>
+					<a href="#">E宠就是正品</a>
+				</p>
+				<p class="pingjia">
+					<a href="#">评价（<span>496,4万</span>）</a>
+				</p>
+				<ul>
+					<li>
+						<a href="#">[登录]</a>
+					</li>
+					<li>
+						<a href="#">[注册]</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-cart-plus"></i> 购物车（<span>0</span>）</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-user"></i> 我的E宠<b></b></a>
+					</li>
+					<li>
+						<a href="#">
+							</i> 收藏我<b></b></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-mobile-phone"></i> 手机版</a>
+					</li>
+					<li>
+						<a href="#">帮助</a>
+					</li>
+					<li class="red">
+						<a href="#">投诉建议</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--header-->
+		<div class="header clearfix">
+			<div class="inner">
+				<div class="logo">
+					<img src="img/epet-logo.png">
+				</div>
+				<div class="search">
+					<form>
+						<input type="text" placeholder="冠能" id="txt"><input type="submit" value="搜索" id="search">
+					</form>
+					<ul>
+						<li>热门搜索：
+							<a class="active" href="#">满699省120</a><span>|</span></li>
+						<li>
+							<a href="#">卡比</a><span>|</span></li>
+						<li>
+							<a href="#">k9Natural冻干粮</a><span>|</span></li>
+						<li>
+							<a href="#">BOTH 5折起</a><span>|</span></li>
+						<li>
+							<a href="#">比瑞吉幼犬季</a>
+						</li>
+					</ul>
+				</div>
+				<div class="tel">
+
+				</div>
+				<div class="cart">
+					<a href="#">
+						购物车（<span>0</span>）
+					</a>
+				</div>
+
+			</div>
+		</div>
+		<!--nav-->
+		<div class="nav clearfix">
+			<div class="inner">
+				<ul>
+					<li>
+						<a class="left" href="#">狗狗 <i class="fa fa-angle-double-down fa-2x"></i></a>
+					</li>
+					<li>
+						<a class="left active2" href="#">商品分类 <i class="fa fa-angle-down fa-2x"></i></a>
+					</li>
+					<li>
+						<a href="#"><img src="img/cate_6.png" />品牌特卖 </i>
+						</a>
+					</li>
+					<li>
+						<a href="#"><img class="hot" src="img/new.gif" />热卖礼包 </i>
+						</a>
+					</li>
+					<li>
+						<a href="#"><img src="img/cate_6.png" />服饰城 </i>
+						</a>
+					</li>
+					<li>
+						<a href="#"><img src="img/cate_6.png" />E宠学堂 </i>
+						</a>
+					</li>
+					<li>
+						<a href="#"><img src="img/cate_6.png" />试用中心 </i>
+						</a>
+					</li>
+					<li>
+						<a href="#"><img src="img/cate_6.png" />清仓特价 </i>
+						</a>
+					</li>
+					<li>
+						<a href="#">国家馆 </i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--banner-->
+		<div class="banner clearfix">
+			<div class="inner">
+				<div class="banner_left">
+					<div class="change">
+						<div class="dog">
+							<span></span>
+							<img src="img/dog-clothype.jpg" />
+							<h3>20382种<em>精</em>选宝贝</h3>
+							<div class="btn">你<em>正</em>在狗狗站溜达</div>
+						</div>
+						<div class="cat">
+							<span></span>
+							<img src="img/cat.jpg" />
+							<h3>8813种<em>精</em>选宝贝</h3>
+							<div class="btn">点击切换</div>
+						</div>
+					</div>
+					<div class="nav">
+						<ul class="nav_I">
+							<li class="nav_I_I">
+								<span></span>
+								<a href="#"><em>主粮</em><i>2034</i></a>
+							</li>
+							<li class="nav_I_I">
+								<a href="#"><em>零食</em><i>2853</i></a><b></b>
+							</li>
+							<li class="nav_I_I">
+								<span></span>
+								<a href="#"><em>日用</em><i>3133</i></a>
+							</li>
+							<li class="nav_I_I">
+								<a href="#"><em>玩具</em><i>2242</i></a><b></b>
+							</li>
+							<li class="nav_I_I">
+								<span></span>
+								<a href="#"><em>保健</em><i>853</i></a>
+							</li>
+							<li class="nav_I_I">
+								<a href="#"><em>医疗</em><i>838</i></a><b></b>
+							</li>
+							<li class="nav_I_I">
+								<span></span>
+								<a href="#"><em>服饰</em><i>3809</i></a>
+							</li>
+							<li class="nav_I_I">
+								<a href="#"><em>牵引</em><i>2805</i></a><b></b>
+							</li>
+							<li class="nav_I_I">
+								<span></span>
+								<a href="#"><em>美容</em><i>860</i></a>
+							</li>
+							<li class="nav_I_I">
+								<a href="#"><em>香波</em><i>1073</i></a><b></b>
+							</li>
+							<li class="nav_I_I">
+								<span></span>
+								<a href="#"><em>书籍</em><i>50</i></a>
+							</li>
+							<li class="nav_I_I">
+								<a href="#"><em>杂志</em><i>50</i></a><b></b>
+							</li>
+							<li class="nav_I_I">
+								<span></span>
+								<a href="#"><em>周边</em><i>102</i></a>
+							</li>
+							<li class="nav_I_I">
+								<a href="#"><em>定制</em><i>74</i></a><b></b>
+							</li>
+							<li class="nav_I_I brand">
+								<span></span>
+								<a href="#"><em>正</em>进行的品牌特卖<i>21</i></a>
+							</li>
+						</ul>
+
+					</div>
+
+				</div>
+				<div class="swiper-container">
+					<div class="swiper-wrapper my-box">
+						<div class="swiper-slide">
+							<a href="#"><img src="img/banner0.jpg" /></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#"><img src="img/banner1.jpg" /></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#"><img src="img/banner2.jpg" /></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#"><img src="img/banner3.jpg" /></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#"><img src="img/banner4.jpg" /></a>
+						</div>
+					</div>
+
+					<div class="swiper-pagination bottom_right">
+
+					</div>
+
+					<div class="swiper-button-prev"><i class="fa fa-angle-left fa-3x"></i></div>
+					<div class="swiper-button-next"><i class="fa fa-angle-right fa-3x"></i></div>
+
+				</div>
+				<div class="banner_right">
+					<div class="brank">
+						<img src="img/dog0.jpg" />
+					</div>
+					<div class="brank">
+						<img src="img/dog1.jpg" />
+					</div>
+					<div class="brank last">
+						<img src="img/dog2.jpg" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--crazy-->
+		<div class="crazy clearfix">
+			<div class="inner">
+				<div class="time">
+					<img src="img/crazy.png" />
+					<p>距离本场结束还有：</p>
+					<div class="clock">
+						<span>0</span><span>0</span><b>:</b><span>0</span><span>0</span><b>:</b><span>0</span><span>0</span>
+					</div>
+					<time>09:00<span class="chang"></span></time>
+					<div class="runing">进行中...</div>
+				</div>
+				<div class="productlist">
+					<ul class="time_list">
+						<li class="pink">
+							<time>09:00</time>
+							<p>进行中</p>
+						</li>
+						<li>
+							<time>10:00</time>
+							<p>即将开始</p>
+						</li>
+						<li>
+							<time>14:00</time>
+							<p>即将开始</p>
+						</li>
+						<li>
+							<time>16:00</time>
+							<p>即将开始</p>
+						</li>
+						<li>
+							<time>20:00</time>
+							<p>即将开始</p>
+						</li>
+						<li>
+							<time>22:00</time>
+							<p>即将开始</p>
+						</li>
+						<li>
+							<time>明日</time>
+							<p>预告</p>
+						</li>
+					</ul>
+					<ul class="pic_list">
+						<div class="leftBtn"><i class="fa fa-angle-left fa-3x"></i></div>
+						<div class="leftBtn right"><i class="fa fa-angle-right fa-3x"></i></div>
+						<li>
+							<img src="img/crazy_pic_03.png" />
+							<div class="btn">精品推荐</div>
+							<p>美国原装进口天衡宝（原雪山...</p>
+							<span class="newPrice"><sub>￥</sub>308.00</span><del>￥385.00</del>
+							<div class="line">
+								<div class="shortLine"></div>
+							</div>
+							<div class="fast">立即抢购</div>
+						</li>
+						<li>
+							<img src="img/crazy_pic_05.png" />
+							<div class="btn">精品推荐</div>
+							<p>美国原装进口天衡宝（原雪山...</p>
+							<span class="newPrice"><sub>￥</sub>308.00</span><del>￥385.00</del>
+							<div class="line">
+								<div class="shortLine"></div>
+							</div>
+							<div class="fast">立即抢购</div>
+						</li>
+						<li>
+							<img src="img/crazy_pic_07.png" />
+							<div class="btn">精品推荐</div>
+							<p>美国原装进口天衡宝（原雪山...</p>
+							<span class="newPrice"><sub>￥</sub>308.00</span><del>￥385.00</del>
+							<div class="line">
+								<div class="shortLine"></div>
+							</div>
+							<div class="fast">立即抢购</div>
+						</li>
+						<li>
+							<img src="img/crazy_pic_09.png" />
+							<div class="btn">精品推荐</div>
+							<p>美国原装进口天衡宝（原雪山...</p>
+							<span class="newPrice"><sub>￥</sub>308.00</span><del>￥385.00</del>
+							<div class="line">
+								<div class="shortLine"></div>
+							</div>
+							<div class="fast">立即抢购</div>
+						</li>
+						<li>
+							<img src="img/crazy_pic_03.png" />
+							<div class="btn">精品推荐</div>
+							<p>美国原装进口天衡宝（原雪山...</p>
+							<span class="newPrice"><sub>￥</sub>308.00</span><del>￥385.00</del>
+							<div class="line">
+								<div class="shortLine"></div>
+							</div>
+							<div class="fast">立即抢购</div>
+						</li>
+						<li>
+							<img src="img/crazy_pic_05.png" />
+							<div class="btn">精品推荐</div>
+							<p>美国原装进口天衡宝（原雪山...</p>
+							<span class="newPrice"><sub>￥</sub>308.00</span><del>￥385.00</del>
+							<div class="line">
+								<div class="shortLine"></div>
+							</div>
+							<div class="fast">立即抢购</div>
+						</li>
+						<li>
+							<img src="img/crazy_pic_07.png" />
+							<div class="btn">精品推荐</div>
+							<p>美国原装进口天衡宝（原雪山...</p>
+							<span class="newPrice"><sub>￥</sub>308.00</span><del>￥385.00</del>
+							<div class="line">
+								<div class="shortLine"></div>
+							</div>
+							<div class="fast">立即抢购</div>
+						</li>
+						<li>
+							<img src="img/crazy_pic_09.png" />
+							<div class="btn">精品推荐</div>
+							<p>美国原装进口天衡宝（原雪山...</p>
+							<span class="newPrice"><sub>￥</sub>308.00</span><del>￥385.00</del>
+							<div class="line">
+								<div class="shortLine"></div>
+							</div>
+							<div class="fast">立即抢购</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!--new-->
+		<div class="new clearfix">
+			<div class="inner">
+				<div class="new_left">
+					<div class="new_box">
+						<div class="box_in">
+							<h3>新品尝鲜</h3>
+							<p class="pointer">上架新品499件>></p>
+							<img src="img/fgline.png" />
+							<p>小**圜 第482个尝鲜的人，获得商品折扣</p>
+							<p><em>8.4</em>折</p>
+							<p class="yellow">进入尝鲜栏目>></p>
+
+						</div>
+					</div>
+				</div>
+				<ul class="new_product">
+					<li class="new_top">
+						<h4>美国进口NERF DOG 网球弹射抢...</h4>
+						<p>户外玩耍新方式，趣味发射，激情有活力...</p>
+						<span class="price">￥155.00</span>
+						<b>趣味飞射玩不停</b>
+						<b>激情不减运动快乐</b>
+						<img src="img/new_2017-03-27T02-36-25_03.png" />
+					</li>\
+					<li class="new_top">
+						<h4>美国进口NERF DOG 网球弹射抢...</h4>
+						<p>户外玩耍新方式，趣味发射，激情有活力...</p>
+						<span class="price">￥155.00</span>
+						<b>趣味飞射玩不停</b>
+						<b>激情不减运动快乐</b>
+						<img src="img/new_2017-03-27T02-36-25_05.png" />
+					</li>
+					<li class="new_top">
+						<h4>美国进口NERF DOG 网球弹射抢...</h4>
+						<p>户外玩耍新方式，趣味发射，激情有活力...</p>
+						<span class="price">￥155.00</span>
+						<b>趣味飞射玩不停</b>
+						<b>激情不减运动快乐</b>
+						<img src="img/new_2017-03-27T02-36-25_07.png" />
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!--ping-->
+		<div class="ping clearfix">
+			<div class="inner">
+				<div class="ping_left">
+					<div class="ping_box">
+						<div class="ping_box_in">
+							<ul>
+								<li>
+									<a href="#">
+										<img src="//img2.epetbar.com/nowater/2017-03/28/10/96a16475cc5bed1c369257d25ee8b6d6.jpg@!water" />
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="//img2.epetbar.com/nowater/2017-02/13/10/a60785bc27501d9b71238baba06308c0.jpg@!water" />
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="//img2.epetbar.com/nowater/2016-12/01/18/6c5efd769a515574e4e17ec9398a04bd.jpg@!water" />
+									</a>
+								</li>
+							</ul>
+							<div class="page">
+								<span class="circle active3"></span>
+								<span class="circle"></span>
+								<span class="circle"></span>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<ul class="ping_middle">
+					<li>
+						<a href="#">
+							<img src="img/ping_2017-03-27T02-36-25_03.png" />
+						</a>
+						<p><span>5</span>个试用商品</p>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/ping_2017-03-27T02-36-25_05.png" />
+						</a>
+						<p style="display: none;"><span>5</span>个试用商品</p>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/ping_2017-03-27T02-36-25_07.png" />
+						</a>
+						<p><span>5</span>个试用商品</p>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/ping_2017-03-27T02-36-25_12.png" />
+						</a>
+						<p><span>5</span>个试用商品</p>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/ping_2017-03-27T02-36-25_13.png" />
+						</a>
+						<p style="display: none;"><span>5</span>个试用商品</p>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/ping_2017-03-27T02-36-25_14.png" />
+						</a>
+						<p><span>5</span>个试用商品</p>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/ping_2017-03-27T02-36-25_18.png" />
+						</a>
+						<p><span>5</span>个试用商品</p>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/ping_2017-03-27T02-36-25_19.png" />
+						</a>
+						<p><span>5</span>个试用商品</p>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/ping_2017-03-27T02-36-25_20.png" />
+						</a>
+						<p><span>5</span>个试用商品</p>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/ping_2017-03-27T02-36-25_24.png" />
+						</a>
+						<p><span>5</span>个试用商品</p>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/ping_2017-03-27T02-36-25_25.png" />
+						</a>
+						<p style="display: none;"><span>5</span>个试用商品</p>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/ping_2017-03-27T02-36-25_26.png" />
+						</a>
+						<p><span>5</span>个试用商品</p>
+					</li>
+				</ul>
+				<div class="try">
+					<h3><i></i>免费试用</h3>
+					<a href="#">还有<span>2</span>个免费试用>></a>
+					<img src="//img2.epetbar.com/2016-10/24/10/cb49f5cc43e5ef56d354fc18ed388a9c.jpg@!200w-c"/>
+					<div class="mian">
+						<del>￥30.00</del><i class="free">免费</i>
+					</div>
+					<p class="clearfix">德国进口 特瑞仕TRIXIE 美资炫帕尔玛奶酪狗...</p>
+					<img class="apply" src="img/i-ask.jpg">
+				</div>
+			</div>
+		</div>
+
+
+
+<!--floor1-->
+		<div class="floor">
+			<div class="inner">
+				<div class="floor_left">
+					<h3><span></span>狗狗主粮</h3>
+					<div class="floor_box">
+						<div class="floor_box_in">
+							<h4><i></i>最热HOT</h4>
+							<ul>
+								<li><a href="#">麦德琳</a></li>
+								<li><a href="#">美士</a></li>
+								<li><a href="#">冠军犬粮</a></li>
+								<li><a href="#">K9Natural</a></li>
+								<li><a href="#">安娜玛特</a></li>
+								<li><a href="#">回归原野</a></li>
+								<li><a href="#">佩玛思特</a></li>
+								<li><a href="#">95%含肉量</a></li>
+								<li><a href="#">赛级犬御用</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="floor-right">
+					<ul>
+						<li><a href="#">处方狗粮</a></li>
+						<li><a href="#">散装狗粮</a></li>
+						<li><a href="#">国内狗粮</a></li>
+						<li><a href="#">进口狗粮</a></li>
+						<li><a href="#" class="re">热门</a></li>
+					</ul>
+					<div class="pic">
+						<a class="pic1" href="#" target="_blank">
+							<img src="//img2.epetbar.com/2017-03/13/12/56393c9e1bc1e1ef0ae5a58bfcf5b276.jpg@!water">
+						</a>
+						<a class="pic2" href="#" target="_blank">
+							<img src="//img2.epetbar.com/nowater/2017-03/23/14/f978f769f68f21b8e71d76afc1047e84.jpg@!water">
+						</a>
+						<a class="pic2" href="#" target="_blank">
+							<img src="//img2.epetbar.com/nowater/2017-03/28/10/81dc496b2a473038c74fd383ad6c5070.jpg@!water">
+						</a>
+						<a class="pic3" href="#" target="_blank">
+							<img src="//img2.epetbar.com/2017-01/17/18/e93de22b62f66992f147752972555a99.jpg@!water">
+						</a>
+						<a class="pic3" href="#" target="_blank">
+							<img src="//img2.epetbar.com/nowater/2017-03/20/10/c7c3cfa20ae1536c34820dd34122fc6c.jpg@!water">
+						</a>
+						<a class="pic3" href="#" target="_blank">
+							<img src="//img2.epetbar.com/2017-03/27/10/b3871737a884e1ab1ca0203d5c8559b9.jpg@!water">
+						</a>
+					</div>
+				</div>
+				<ul class="icon_list clearfix">
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/18/14/aa9949e953c28d3570f45c8140659f92.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/dc6dfe16b53030f17b93bce641f02cfd.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/df53f688c929176398c114b9a9b2b903.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/1c0f3d0e888dfc347199f1fab46331f6.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/3fda73b587cffac6d43fe2bf92511b0e.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/ff4378947e66d2d91ecb92d60fafe046.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/14/c2adde2885a24e1152d744524a1d2c67.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/14/faa6bcea00f1d51a0a377be4687126d0.jpg@!water">
+					</a></li>
+				</ul>
+			</div>
+		</div>
+
+
+		<!--floor2-->
+		<div class="floor">
+			<div class="inner">
+				<div class="floor_left">
+					<h3 class="f2"><span></span>狗狗零食</h3>
+					<div class="floor_box floor2">
+						<div class="floor_box_in">
+							<h4><i></i>最热HOT</h4>
+							<ul>
+								<li><a href="#">麦德琳</a></li>
+								<li><a href="#">美士</a></li>
+								<li><a href="#">冠军犬粮</a></li>
+								<li><a href="#">K9Natural</a></li>
+								<li><a href="#">安娜玛特</a></li>
+								<li><a href="#">回归原野</a></li>
+								<li><a href="#">佩玛思特</a></li>
+								<li><a href="#">95%含肉量</a></li>
+								<li><a href="#">赛级犬御用</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="floor-right">
+					<ul>
+						<li><a href="#">处方狗粮</a></li>
+						<li><a href="#">散装狗粮</a></li>
+						<li><a href="#">国内狗粮</a></li>
+						<li><a href="#">进口狗粮</a></li>
+						<li><a href="#" class="re">热门</a></li>
+					</ul>
+					<div class="pic">
+						<a class="pic1" href="#" target="_blank">
+							<img src="//img2.epetbar.com/2017-03/13/12/56393c9e1bc1e1ef0ae5a58bfcf5b276.jpg@!water">
+						</a>
+						<a class="pic2" href="#" target="_blank">
+							<img src="//img2.epetbar.com/nowater/2017-03/23/14/f978f769f68f21b8e71d76afc1047e84.jpg@!water">
+						</a>
+						<a class="pic2" href="#" target="_blank">
+							<img src="//img2.epetbar.com/nowater/2017-03/28/10/81dc496b2a473038c74fd383ad6c5070.jpg@!water">
+						</a>
+						<a class="pic3" href="#" target="_blank">
+							<img src="//img2.epetbar.com/2017-01/17/18/e93de22b62f66992f147752972555a99.jpg@!water">
+						</a>
+						<a class="pic3" href="#" target="_blank">
+							<img src="//img2.epetbar.com/nowater/2017-03/20/10/c7c3cfa20ae1536c34820dd34122fc6c.jpg@!water">
+						</a>
+						<a class="pic3" href="#" target="_blank">
+							<img src="//img2.epetbar.com/2017-03/27/10/b3871737a884e1ab1ca0203d5c8559b9.jpg@!water">
+						</a>
+					</div>
+				</div>
+				<ul class="icon_list clearfix">
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/18/14/aa9949e953c28d3570f45c8140659f92.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/dc6dfe16b53030f17b93bce641f02cfd.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/df53f688c929176398c114b9a9b2b903.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/1c0f3d0e888dfc347199f1fab46331f6.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/3fda73b587cffac6d43fe2bf92511b0e.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/ff4378947e66d2d91ecb92d60fafe046.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/14/c2adde2885a24e1152d744524a1d2c67.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/14/faa6bcea00f1d51a0a377be4687126d0.jpg@!water">
+					</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!--floor3-->
+		<div class="floor">
+			<div class="inner">
+				<div class="floor_left">
+					<h3 class="f3"><span></span>狗狗保健&医疗</h3>
+					<div class="floor_box floor3">
+						<div class="floor_box_in">
+							<h4><i></i>最热HOT</h4>
+							<ul>
+								<li><a href="#">麦德琳</a></li>
+								<li><a href="#">美士</a></li>
+								<li><a href="#">冠军犬粮</a></li>
+								<li><a href="#">K9Natural</a></li>
+								<li><a href="#">安娜玛特</a></li>
+								<li><a href="#">回归原野</a></li>
+								<li><a href="#">佩玛思特</a></li>
+								<li><a href="#">95%含肉量</a></li>
+								<li><a href="#">赛级犬御用</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="floor-right">
+					<ul>
+						<li><a href="#">处方狗粮</a></li>
+						<li><a href="#">散装狗粮</a></li>
+						<li><a href="#">国内狗粮</a></li>
+						<li><a href="#">进口狗粮</a></li>
+						<li><a href="#" class="re">热门</a></li>
+					</ul>
+					<div class="pic">
+						<a class="pic1" href="#" target="_blank">
+							<img src="//img2.epetbar.com/2017-03/13/12/56393c9e1bc1e1ef0ae5a58bfcf5b276.jpg@!water">
+						</a>
+						<a class="pic2" href="#" target="_blank">
+							<img src="//img2.epetbar.com/nowater/2017-03/23/14/f978f769f68f21b8e71d76afc1047e84.jpg@!water">
+						</a>
+						<a class="pic2" href="#" target="_blank">
+							<img src="//img2.epetbar.com/nowater/2017-03/28/10/81dc496b2a473038c74fd383ad6c5070.jpg@!water">
+						</a>
+						<a class="pic3" href="#" target="_blank">
+							<img src="//img2.epetbar.com/2017-01/17/18/e93de22b62f66992f147752972555a99.jpg@!water">
+						</a>
+						<a class="pic3" href="#" target="_blank">
+							<img src="//img2.epetbar.com/nowater/2017-03/20/10/c7c3cfa20ae1536c34820dd34122fc6c.jpg@!water">
+						</a>
+						<a class="pic3" href="#" target="_blank">
+							<img src="//img2.epetbar.com/2017-03/27/10/b3871737a884e1ab1ca0203d5c8559b9.jpg@!water">
+						</a>
+					</div>
+				</div>
+				<ul class="icon_list clearfix">
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/18/14/aa9949e953c28d3570f45c8140659f92.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/dc6dfe16b53030f17b93bce641f02cfd.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/df53f688c929176398c114b9a9b2b903.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/1c0f3d0e888dfc347199f1fab46331f6.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/3fda73b587cffac6d43fe2bf92511b0e.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/ff4378947e66d2d91ecb92d60fafe046.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/14/c2adde2885a24e1152d744524a1d2c67.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/14/faa6bcea00f1d51a0a377be4687126d0.jpg@!water">
+					</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!--floor4-->
+		<div class="floor">
+			<div class="inner">
+				<div class="floor_left">
+					<h3 class="f4"><span></span>狗狗日用</h3>
+					<div class="floor_box floor4">
+						<div class="floor_box_in">
+							<h4><i></i>最热HOT</h4>
+							<ul>
+								<li><a href="#">麦德琳</a></li>
+								<li><a href="#">美士</a></li>
+								<li><a href="#">冠军犬粮</a></li>
+								<li><a href="#">K9Natural</a></li>
+								<li><a href="#">安娜玛特</a></li>
+								<li><a href="#">回归原野</a></li>
+								<li><a href="#">佩玛思特</a></li>
+								<li><a href="#">95%含肉量</a></li>
+								<li><a href="#">赛级犬御用</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="floor-right">
+					<ul>
+						<li><a href="#">处方狗粮</a></li>
+						<li><a href="#">散装狗粮</a></li>
+						<li><a href="#">国内狗粮</a></li>
+						<li><a href="#">进口狗粮</a></li>
+						<li><a href="#" class="re">热门</a></li>
+					</ul>
+					<div class="pic">
+						<a class="pic1" href="#" target="_blank">
+							<img src="//img2.epetbar.com/2017-03/13/12/56393c9e1bc1e1ef0ae5a58bfcf5b276.jpg@!water">
+						</a>
+						<a class="pic2" href="#" target="_blank">
+							<img src="//img2.epetbar.com/nowater/2017-03/23/14/f978f769f68f21b8e71d76afc1047e84.jpg@!water">
+						</a>
+						<a class="pic2" href="#" target="_blank">
+							<img src="//img2.epetbar.com/nowater/2017-03/28/10/81dc496b2a473038c74fd383ad6c5070.jpg@!water">
+						</a>
+						<a class="pic3" href="#" target="_blank">
+							<img src="//img2.epetbar.com/2017-01/17/18/e93de22b62f66992f147752972555a99.jpg@!water">
+						</a>
+						<a class="pic3" href="#" target="_blank">
+							<img src="//img2.epetbar.com/nowater/2017-03/20/10/c7c3cfa20ae1536c34820dd34122fc6c.jpg@!water">
+						</a>
+						<a class="pic3" href="#" target="_blank">
+							<img src="//img2.epetbar.com/2017-03/27/10/b3871737a884e1ab1ca0203d5c8559b9.jpg@!water">
+						</a>
+					</div>
+				</div>
+				<ul class="icon_list clearfix">
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/18/14/aa9949e953c28d3570f45c8140659f92.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/dc6dfe16b53030f17b93bce641f02cfd.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/df53f688c929176398c114b9a9b2b903.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/1c0f3d0e888dfc347199f1fab46331f6.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/3fda73b587cffac6d43fe2bf92511b0e.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/ff4378947e66d2d91ecb92d60fafe046.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/14/c2adde2885a24e1152d744524a1d2c67.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/14/faa6bcea00f1d51a0a377be4687126d0.jpg@!water">
+					</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!--floor5-->
+		<div class="floor">
+			<div class="inner">
+				<div class="floor_left">
+					<h3 class="f5"><span></span>狗狗美容&香波</h3>
+					<div class="floor_box floor5">
+						<div class="floor_box_in">
+							<h4><i></i>最热HOT</h4>
+							<ul>
+								<li><a href="#">麦德琳</a></li>
+								<li><a href="#">美士</a></li>
+								<li><a href="#">冠军犬粮</a></li>
+								<li><a href="#">K9Natural</a></li>
+								<li><a href="#">安娜玛特</a></li>
+								<li><a href="#">回归原野</a></li>
+								<li><a href="#">佩玛思特</a></li>
+								<li><a href="#">95%含肉量</a></li>
+								<li><a href="#">赛级犬御用</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="floor-right">
+					<ul>
+						<li><a href="#">处方狗粮</a></li>
+						<li><a href="#">散装狗粮</a></li>
+						<li><a href="#">国内狗粮</a></li>
+						<li><a href="#">进口狗粮</a></li>
+						<li><a href="#" class="re">热门</a></li>
+					</ul>
+					<div class="pic">
+						<a class="pic1" href="#" target="_blank">
+							<img src="//img2.epetbar.com/2017-03/13/12/56393c9e1bc1e1ef0ae5a58bfcf5b276.jpg@!water">
+						</a>
+						<a class="pic2" href="#" target="_blank">
+							<img src="//img2.epetbar.com/nowater/2017-03/23/14/f978f769f68f21b8e71d76afc1047e84.jpg@!water">
+						</a>
+						<a class="pic2" href="#" target="_blank">
+							<img src="//img2.epetbar.com/nowater/2017-03/28/10/81dc496b2a473038c74fd383ad6c5070.jpg@!water">
+						</a>
+						<a class="pic3" href="#" target="_blank">
+							<img src="//img2.epetbar.com/2017-01/17/18/e93de22b62f66992f147752972555a99.jpg@!water">
+						</a>
+						<a class="pic3" href="#" target="_blank">
+							<img src="//img2.epetbar.com/nowater/2017-03/20/10/c7c3cfa20ae1536c34820dd34122fc6c.jpg@!water">
+						</a>
+						<a class="pic3" href="#" target="_blank">
+							<img src="//img2.epetbar.com/2017-03/27/10/b3871737a884e1ab1ca0203d5c8559b9.jpg@!water">
+						</a>
+					</div>
+				</div>
+				<ul class="icon_list clearfix">
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/18/14/aa9949e953c28d3570f45c8140659f92.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/dc6dfe16b53030f17b93bce641f02cfd.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/df53f688c929176398c114b9a9b2b903.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/1c0f3d0e888dfc347199f1fab46331f6.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/3fda73b587cffac6d43fe2bf92511b0e.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/ff4378947e66d2d91ecb92d60fafe046.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/14/c2adde2885a24e1152d744524a1d2c67.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/14/faa6bcea00f1d51a0a377be4687126d0.jpg@!water">
+					</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!--floor6-->
+		<div class="floor">
+			<div class="inner">
+				<div class="floor_left">
+					<h3 class="f6"><span></span>狗狗牵引&服饰&玩具</h3>
+					<div class="floor_box floor6">
+						<div class="floor_box_in">
+							<h4><i></i>最热HOT</h4>
+							<ul>
+								<li><a href="#">麦德琳</a></li>
+								<li><a href="#">美士</a></li>
+								<li><a href="#">冠军犬粮</a></li>
+								<li><a href="#">K9Natural</a></li>
+								<li><a href="#">安娜玛特</a></li>
+								<li><a href="#">回归原野</a></li>
+								<li><a href="#">佩玛思特</a></li>
+								<li><a href="#">95%含肉量</a></li>
+								<li><a href="#">赛级犬御用</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="floor-right">
+					<ul>
+						<li><a href="#">处方狗粮</a></li>
+						<li><a href="#">散装狗粮</a></li>
+						<li><a href="#">国内狗粮</a></li>
+						<li><a href="#">进口狗粮</a></li>
+						<li><a href="#" class="re">热门</a></li>
+					</ul>
+					<div class="pic">
+						<a class="pic1" href="#" target="_blank">
+							<img src="//img2.epetbar.com/2017-03/13/12/56393c9e1bc1e1ef0ae5a58bfcf5b276.jpg@!water">
+						</a>
+						<a class="pic2" href="#" target="_blank">
+							<img src="//img2.epetbar.com/nowater/2017-03/23/14/f978f769f68f21b8e71d76afc1047e84.jpg@!water">
+						</a>
+						<a class="pic2" href="#" target="_blank">
+							<img src="//img2.epetbar.com/nowater/2017-03/28/10/81dc496b2a473038c74fd383ad6c5070.jpg@!water">
+						</a>
+						<a class="pic3" href="#" target="_blank">
+							<img src="//img2.epetbar.com/2017-01/17/18/e93de22b62f66992f147752972555a99.jpg@!water">
+						</a>
+						<a class="pic3" href="#" target="_blank">
+							<img src="//img2.epetbar.com/nowater/2017-03/20/10/c7c3cfa20ae1536c34820dd34122fc6c.jpg@!water">
+						</a>
+						<a class="pic3" href="#" target="_blank">
+							<img src="//img2.epetbar.com/2017-03/27/10/b3871737a884e1ab1ca0203d5c8559b9.jpg@!water">
+						</a>
+					</div>
+				</div>
+				<ul class="icon_list clearfix">
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/18/14/aa9949e953c28d3570f45c8140659f92.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/dc6dfe16b53030f17b93bce641f02cfd.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/df53f688c929176398c114b9a9b2b903.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/1c0f3d0e888dfc347199f1fab46331f6.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/3fda73b587cffac6d43fe2bf92511b0e.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/16/ff4378947e66d2d91ecb92d60fafe046.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/14/c2adde2885a24e1152d744524a1d2c67.jpg@!water">
+					</a></li>
+					<li><a href="#" target="_blank">
+						<img src="//img2.epetbar.com/nowater/brand_logo/2016-08/12/14/faa6bcea00f1d51a0a377be4687126d0.jpg@!water">
+					</a></li>
+				</ul>
+			</div>
+		</div>
+
+
+
+
+		<!---->
+
+
+		<!--<img src="//img1.epetbar.com/2016-03/10/10/19dcf16a16a2bc583bd47218b8392766.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2016-03/10/10/5fbef854e398af581110ec240f9169c3.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2015-09/15/16/b08b31459966eaadd6820399fba09fd6.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2016-12/06/10/ed5bc3bc26caca36bdf0ad1f5eef7678.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2016-04/21/10/647d598848f3cd66a01b0eec6b765b9b.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2016-10/11/14/79dcca9c709c57a79cf00745fca743e2.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2017-02/09/12/44c5f19050e281157465e3da264e5537.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2016-07/28/16/8394432d7c6f9699e7dcee6c9d3fb0c3.jpg@!200w-c">-->
+
+
+
+		<!--<img src="//img1.epetbar.com/2016-11/28/18/ce6ec462a2bdeb85e6aabb6500f5dcad.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2015-08/05/625dc804ee057de62d033d0e173b5bb7.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2016-06/27/14/f64b7377714e350dfa599a7a70868f1c.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2014-01/02/c4563a152beab40bf95886875b2e55fa.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2017-03/27/10/a62e2d8943812ee51240914ef4a062ca.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2015-05/10/3f13140b68d4375cde416d2884b191fb.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2017-01/17/18/7dd229ee03e407cdeb9a72f502c68a6c.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2016-04/11/12/bf04189823f539bab39eb27d347c195a.jpg@!200w-c">-->
+
+
+
+		<!--<img src="//img1.epetbar.com/2016-03/14/10/f43aa907b4aca94bf9859244493f9828.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2014-03/18/99812dee233a672a4877adc87a9e9048.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2016-03/14/10/440c8743a7649db84ee499b8dc09fe32.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2016-03/14/10/9e3ddb029c5ffe3ca856ff0c6c2d58ee.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2014-03/17/3654c2ddd76619fac0a2ac873072b8e4.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2014-11/27/b0f7f02e907bc01d5ee8caea2361faa8.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2016-04/28/8/61d8c1d66d926f7245be481d94f13e97.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2016-10/10/12/54bc7f62ff777d47ae90cdfd89301aac.jpg@!200w-c">-->
+
+		<!--<img src="//img1.epetbar.com/2016-05/03/10/2dd271edfa69b7bf89f8e88aba893de2.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2016-06/24/8/0ee3f3ca95593c80a84c0cb55a205a9e.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2016-04/28/16/17905ad6c66fe0390f1c03f4414e9b4c.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2015-08/06/14/943d504933c18682abb566d46b4a4784.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2016-06/24/10/a2fac035fc7891a1b33288b22a814749.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2016-07/02/14/d4fbf329cdfd544269471b2b3ecf5660.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2013-07/27/865b087b78270b2f9d17b6e362c84ca1.jpg@!200w-c">-->
+		<!--<img src="//img1.epetbar.com/2016-05/09/10/02e80b61c9724dfa986d7aed720b4a20.jpg@!200w-c">-->
+
+
+
+
+
+
+
+
+		<aside>
+			<a id="login" href="#"></a>
+			<a id="cart"><span></span>购物车<i>0</i></a>
+			<a id="online"><span></span>在线客服</a>
+			<a id="message" href="#"></a>
+			<a id="heart" href="#"></a>
+			<a id="erweima" href="#"></a>
+			<a id="home"><i class="fa fa-angle-up fa-3x"></i></a>
+		</aside>
+
+
+		<!--icon-->
+		<div class="icon clearfix">
+			<div class="inner">
+				<ul>
+					<li>
+						<a href="#"><span></span>绝对的正品</a>
+					</li>
+					<li>
+						<a href="#"><span></span>全球的好货</a>
+					</li>
+					<li>
+						<a href="#"><span></span>自家的仓库</a>
+					</li>
+					<li>
+						<a href="#"><span></span>自家的配送</a>
+					</li>
+					<li>
+						<a href="#"><span></span>养宠的帮手</a>
+					</li>
+					<li>
+						<a href="#"><span></span>小小的成绩</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!--footer-->
+		<div class="footer clearfix">
+			<div class="inner">
+				<div class="footer_top">
+					<div class="footer_top_left">
+						<img src="img/dog_phone.gif" />
+						<div class="tel">
+							<h4>服务热线:</h4>
+							<p>400-888-9200<b>(免长途费)</b></p>
+							<p>023-65584888</p>
+							<i>工作时间：09:00--21:00</i>
+						</div>
+					</div>
+					<dl>
+						<dt>支付方式</dt>
+						<dd>
+							<a href="#">货到付款</a>
+						</dd>
+						<dd>
+							<a href="#">余额支付</a>
+						</dd>
+						<dd>
+							<a href="#">银行转账</a>
+						</dd>
+						<dd>
+							<a href="#">在线支付</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>配送方式</dt>
+						<dd>
+							<a href="#">E宠快递</a>
+						</dd>
+						<dd>
+							<a href="#">外包快递</a>
+						</dd>
+						<dd>
+							<a href="#">物流运输</a>
+						</dd>
+						<dd>
+							<a href="#">公司地址</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>购物指南</dt>
+						<dd>
+							<a href="#">退换货政策</a>
+						</dd>
+						<dd>
+							<a href="#">它时代杂志</a>
+						</dd>
+						<dd>
+							<a href="#">常见问题</a>
+						</dd>
+						<dd>
+							<a href="#">宠物知识</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>关于我们</dt>
+						<dd>
+							<a href="#">关于我们</a>
+						</dd>
+						<dd>
+							<a href="#">仓储中心</a>
+						</dd>
+						<dd>
+							<a href="#">联系我们</a>
+						</dd>
+						<dd>
+							<a href="#">人才招聘</a>
+						</dd>
+					</dl>
+
+					<div class="footer_top_right">
+						<div class="app">
+							<h3>扫描下载APP下单更优惠</h3>
+							<img src="img/app.png" />
+						</div>
+						<div class="app">
+							<h3>扫描关注E宠商城微信</h3>
+							<img src="img/weixin.jpg" />
+						</div>
+					</div>
+				</div>
+				<div class="footer_bottom">
+					<ul class="block">
+						<li>友情链接：</li>
+						<li>
+							<a href="#">E宠猫用品</a>
+						</li>
+						<li>
+							<a href="#">骨头网 </a>
+						</li>
+						<li>
+							<a href="#">狗粮品牌 </a>
+						</li>
+						<li>
+							<a href="#">宠物用品 </a>
+						</li>
+						<li>
+							<a href="#">钓鱼网 </a>
+						</li>
+						<li>
+							<a href="#">狗粮价格 </a>
+						</li>
+						<li>
+							<a href="#">淘狗网 </a>
+						</li>
+						<li>
+							<a href="#">重庆宠物 </a>
+						</li>
+						<li>
+							<a href="#">宠物狗 </a>
+						</li>
+						<li>
+							<a href="#">淘宝返利 </a>
+						</li>
+						<li>
+							<a href="#">9块9包邮 </a>
+						</li>
+						<li>
+							<a href="#">披萨 </a>
+						</li>
+						<li>
+							<a href="#">返利网 </a>
+						</li>
+						<li>
+							<a href="#">品牌折扣网 </a>
+						</li>
+						<li>
+							<a href="#">大连分类信息 </a>
+						</li>
+						<li>
+							<a href="#">礼物网 </a>
+						</li>
+						<li>
+							<a href="#" class="open">山东网</a><i class="fa fa-angle-up"></i></li>
+					</ul>
+					<ul class="none">
+						<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+						<li>
+							<a href="#">驴友网 </a>
+						</li>
+						<li>
+							<a href="#">服装资讯 </a>
+						</li>
+						<li>
+							<a href="#">1折网 </a>
+						</li>
+						<li>
+							<a href="#">成都房产 </a>
+						</li>
+						<li>
+							<a href="#">淘粉吧返利网 </a>
+						</li>
+						<li>
+							<a href="#">比价网 </a>
+						</li>
+						<li>
+							<a href="#">渝味晓宇火锅 </a>
+						</li>
+						<li>
+							<a href="#">土地流转 </a>
+						</li>
+						<li>
+							<a href="#">重庆网络推广 </a>
+						</li>
+						<li>
+							<a href="#">重庆卫校 </a>
+						</li>
+						<li>
+							<a href="#">重庆卫生学校 </a>
+						</li>
+						<li>
+							<a href="#">返利网 </a>
+						</li>
+						<li>
+							<a href="#">海外代购 </a>
+						</li>
+						<li>
+							<a href="#">中国宠物网 </a>
+						</li>
+						<li>
+							<a href="#">钓鱼之家 </a>
+						</li>
+						<li>
+							<a href="#">罗汉鱼 </a>
+						</li>
+						<li>
+							<a href="#">&nbsp;&nbsp;&nbsp;&nbsp;海水鱼 </a>
+						</li>
+						<li>
+							<a href="#">北京宠物 </a>
+						</li>
+						<li>
+							<a href="#">龟友之家 </a>
+						</li>
+						<li>
+							<a href="#">天津钓鱼网 </a>
+						</li>
+						<li>
+							<a href="#">马可波罗网 </a>
+						</li>
+						<li>
+							<a href="#">阳台园艺 </a>
+						</li>
+						<li>
+							<a href="#">宠物店加盟 </a>
+						</li>
+						<li>
+							<a href="#">爱狗网 </a>
+						</li>
+						<li>
+							<a href="#">兽药网 </a>
+						</li>
+						<li>
+							<a href="#">手表网</a>
+						</li>
+					</ul>
+					<div class="pic_list clearfix">
+						<img src="img/360.png" />
+						<img src="img/chengxin.png" />
+						<img src="img/shiming.png" />
+						<img src="img/tx.png" />
+						<img src="img/jybz.png" />
+						<img src="img/cqgs.png" />
+						<img src="img/baiq.png" />
+						<img src="img/wsls.png" />
+						<img src="img/sfqy.png" />
+						<img src="img/yxqy.png" />
+						<img src="img/bhdw.png" />
+						<img src="img/sjws.png" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>
